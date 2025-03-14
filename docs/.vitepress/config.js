@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 export default {
+  base: '/DocEngine/',
   title: 'Jakei',
   themeConfig: {
     outline:{

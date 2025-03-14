@@ -250,4 +250,17 @@ except ZeroDivisionError:
     print("不能除以0！")
 ```
 
+### `try: ... except: ... else: ... finally: ...`
+**描述**：结合 `else` 和 `finally`，无异常时执行 `else`，最终始终执行 `finally`。  
 
+**示例**：
+```python
+try:
+    result = 100 / int(input("输入除数: "))
+except (ZeroDivisionError, ValueError) as e:
+    print(f"错误: {e}")
+else:
+    print(f"计算结果: {result}")
+finally:
+    print("运算结束")
+```
