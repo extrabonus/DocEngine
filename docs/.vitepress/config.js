@@ -104,6 +104,20 @@ export default {
                         ]
                       },
                       {
+                        text: '类与对象', 
+                        collapsed: true, 
+                        items:[
+                          {
+                          text: '基础概念', 
+                          link: '/Toolchain/Python/class/basic',
+                          },
+                          {
+                            text: '魔法方法', 
+                            link: '/Toolchain/Python/class/magic',
+                          },
+                        ]
+                      },
+                      {
                         text: '最佳实践', 
                         collapsed: true, 
                         items:[
