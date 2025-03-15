@@ -1,7 +1,8 @@
-import { defineConfig } from 'vitepress'
+import { build, defineConfig } from 'vitepress'
 export default {
   base: '/DocEngine/',
   title: 'Jakei',
+  outDir:'../../dist',
   themeConfig: {
     outline:{
       level:[2,3],
