@@ -11,7 +11,7 @@
 - `*pathsegments`：字符串或路径对象，支持多参数拼接（如`Path('a', 'b')`等效于`a/b`）
 
 **示例**：
-```python
+```Python
 from pathlib import Path
 
 # 基础创建方式
@@ -41,7 +41,7 @@ print(p4)                             # 输出: /current/workdir的上级目录�
 ## 路径拼接 `/`
 **描述**：使用除法运算符实现跨平台路径拼接  
 **示例**：
-```python
+```Python
 config_path = Path('project') / 'config' / 'settings.json'
 print(config_path)  # 输出: project/config/settings.json（自动处理OS差异）
 ```
@@ -50,7 +50,7 @@ print(config_path)  # 输出: project/config/settings.json（自动处理OS差�
 **参数**：
 - `*other`：多个路径片段  
 **示例**：
-```python
+```Python
 p = Path('a').joinpath('b', 'c')
 print(p)  # 输出: a/b/c
 ```
@@ -58,7 +58,7 @@ print(p)  # 输出: a/b/c
 ## `resolve(strict=False)`
 **描述**：解析符号链接并处理`.`/`..`，返回绝对路径  
 **示例**：
-```python
+```Python
 resolved_path = Path('scripts/../data').resolve()
 print(resolved_path)  # 输出: /absolute/path/data（具体路径取决于当前工作目录）
 ```
@@ -80,7 +80,7 @@ print(resolved_path)  # 输出: /absolute/path/data（具体路径取决于当�
 
 ## 目录管理
 **示例**：
-```python
+```Python
 # 创建目录（支持递归创建）
 Path('new/project').mkdir(parents=True, exist_ok=True)  # 目录结构 new/project 被创建
 
@@ -95,7 +95,7 @@ Path('temp.txt').unlink(missing_ok=True)  # 文件被删除，若文件不存在
 ### `iterdir()`
 **描述**：生成目录下的所有条目  
 **示例**：
-```python
+```Python
 for item in Path('.').iterdir():
     print(f"{'DIR' if item.is_dir() else 'FILE'} → {item.name}")
 # 示例输出:
@@ -108,7 +108,7 @@ for item in Path('.').iterdir():
 **参数**：
 - `pattern`：Unix风格通配符模式  
 **示例**：
-```python
+```Python
 # 查找当前目录所有.py文件
 py_files = list(Path('src').glob('*.py'))
 print(py_files)  # 输出: [PosixPath('src/main.py'), PosixPath('src/utils.py')]
@@ -120,7 +120,7 @@ print(md_files)  # 输出: [PosixPath('docs/ch1.md'), PosixPath('docs/notes/ch2.
 
 ## 路径修改
 **示例**：
-```python
+```Python
 # 修改文件名（保留路径）
 new_path = Path('old.txt').with_name('new.txt')
 print(new_path)  # 输出: new.txt
@@ -132,14 +132,14 @@ print(new_path)  # 输出: data.xlsx
 
 ## 相对路径计算
 **示例**：
-```python
+```Python
 rel_path = Path('/a/b/c').relative_to('/a')
 print(rel_path)  # 输出: b/c
 ```
 
 ## 文件元数据
 **示例**：
-```python
+```Python
 stat = Path('file.txt').stat()
 print(f"大小: {stat.st_size} bytes, 修改时间: {stat.st_mtime}")
 # 示例输出: 大小: 1024 bytes, 修改时间: 1620000000.0（具体数值取决于文件实际属性）

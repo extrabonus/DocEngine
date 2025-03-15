@@ -2,26 +2,26 @@
 
 ## 数据类型
 ### **整数（int）**
-  ```python
+  ```Python
   a = 10
   print(type(a))  # <class 'int'>
   ```
 
 ### **浮点数（float）**
-  ```python
+  ```Python
   b = 3.14
   print(type(b))  # <class 'float'>
   ```
 
 ### **布尔值（bool）**
-  ```python
+  ```Python
   c = True
   d = False
   print(type(c))  # <class 'bool'>
   ```
 
 ### 字符串（str）
-```python
+```Python
 s1 = "Hello"
 s2 = 'Python'
 print(s1 + " " + s2)  # Hello Python
@@ -29,7 +29,7 @@ print(s1[0])          # H
 print(len(s1))        # 5
 ```
 ### 类型转换
-```python
+```Python
 # 字符串转整数
 num_str = "123"
 num = int(num_str)
@@ -42,7 +42,7 @@ print(s + "abc")  # 456abc
 ```
 
 ## 输入输出
-```python
+```Python
 # 输入（返回字符串）
 name = input("请输入姓名：")
 print("你好，" + name)
@@ -67,7 +67,7 @@ print(f"{name}的年龄是{age}岁")  # f-string（Python 3.6+）
 | `**`   | 幂运算     | `2 ** 3`              | `8`   |
 
 **示例**：
-```python
+```Python
 print(2 ** 3)    # 输出: 8
 print(10 % 3)    # 输出: 1
 ```
@@ -84,7 +84,7 @@ print(10 % 3)    # 输出: 1
 | `<=`   | 小于等于           | `5 <= 3`      | `False` |
 
 **示例**：
-```python
+```Python
 print("apple" == "apple")   # 输出: True
 print(3 != "3")             # 输出: True（类型不同）
 ```
@@ -98,7 +98,7 @@ print(3 != "3")             # 输出: True（类型不同）
 | `not`  | 逻辑非             | `not True`          | `False` |
 
 **示例**（短路特性）：
-```python
+```Python
 a = 5
 print(a > 0 and a < 10)   # 输出: True
 print(not (a == 5))       # 输出: False
@@ -114,7 +114,7 @@ print(not (a == 5))       # 输出: False
 | `*=`   | 乘法赋值           | `x *= 4` → `x = x * 4` |
 
 **示例**：
-```python
+```Python
 x = 10
 x **= 2  # x = x ** 2
 print(x) # 输出: 100
@@ -127,7 +127,7 @@ print(x) # 输出: 100
 | `is`   | 对象身份判断       | `a = []; b = []; a is b` | `False` |
 
 **示例**：
-```python
+```Python
 lst = [1, 2, 3]
 print(2 in lst)      # 输出: True
 print(2 is 2.0)      # 输出: False（类型不同）
@@ -146,7 +146,7 @@ print(2 is 2.0)      # 输出: False（类型不同）
 | 5      | `not`, `and`, `or`         | `not True or False` → `False` |
 
 **示例**：
-```python
+```Python
 print(3 + 2 * 4)      # 输出: 11（先乘后加）
 print((3 + 2) * 4)    # 输出: 20（括号改变优先级）
 ```
@@ -165,7 +165,7 @@ print((3 + 2) * 4)    # 输出: 20（括号改变优先级）
 | `\r`     | 回车（覆盖行首内容）   | `print("Hello\rW")`   | `Wello`        |
 
 **示例**：
-```python
+```Python
 print("第一行\n第二行\t缩进")  
 # 输出:
 # 第一行
@@ -176,7 +176,7 @@ print(r"C:\new_folder")  # 输出: C:\new_folder
 ```
 
 ## 分支结构（if-elif-else）
-```python
+```Python
 age = 18
 
 if age < 0:
@@ -195,7 +195,7 @@ else:
 ---
 
 ###  `for` 循环
-```python
+```Python
 # 遍历列表
 fruits = ["apple", "banana", "cherry"]
 for fruit in fruits:
@@ -213,7 +213,7 @@ for i in range(3):  # 0,1,2
 ---
 
 ### `while` 循环
-```python
+```Python
 count = 0
 while count < 3:
     print(count)
@@ -229,7 +229,7 @@ while count < 3:
 ###  循环控制
 - **`break`**: 终止循环  
 - **`continue`**: 跳过当前一次循环  
-```python
+```Python
 for i in range(5):
     if i == 2:
         continue  # 跳过2
@@ -240,7 +240,7 @@ for i in range(5):
 ```
 
 ## 异常处理（try-except）
-```python
+```Python
 try:
     num = int(input("输入一个数字："))
     print(10 / num)
@@ -254,7 +254,7 @@ except ZeroDivisionError:
 **描述**：结合 `else` 和 `finally`，无异常时执行 `else`，最终始终执行 `finally`。  
 
 **示例**：
-```python
+```Python
 try:
     result = 100 / int(input("输入除数: "))
 except (ZeroDivisionError, ValueError) as e:

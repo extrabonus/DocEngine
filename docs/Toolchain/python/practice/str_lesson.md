@@ -76,7 +76,7 @@
 
 #### **题目 1：字符串大小写转换**
 
-```python
+```Python
 print("BOB".lower())
 print("BOB".upper())
 
@@ -84,7 +84,7 @@ print("BOB".upper())
 
 #### **题目 2：统计元音字母数量**
 
-```python
+```Python
 vowel = "aeiouAEIOU"
 str1 = "Hello World"
 counts = 0
@@ -93,7 +93,7 @@ for i in str1:
         counts += 1
 print("hello world中的元音字母数量为", counts)
 ```
-```python
+```Python
 vowel = "aeiouAEIOU"
 str1 = "Hello World"
 counts = 0
@@ -104,14 +104,14 @@ print("hello world中的元音字母数量为", counts)
 ```
 
 #### **题目 3：反转字符串**
-```python
+```Python
 str1 = input("请输入一个字符串:")
 newstr = "".join([str1[i] for i in range(len(str1)-1,-1,-1)]) #range(start,end,step)
 print("该字符串反转后为:", newstr)
 
 ```
 #### **题目 4：检查回文**
-```python
+```Python
 str1 = input("请输入一个字符串:")
 if str1 == str1[::-1]:
     print("此字符串为回文字符！")
@@ -121,7 +121,7 @@ else:
 ```
 
 #### **题目 5：去除字符串中的空格**
-```python
+```Python
 str1 = "  Py thon  "
 newstr1 = str1.replace(" ","")
 print(newstr1)
@@ -129,26 +129,26 @@ print(newstr1)
 ```
 
 #### **题目 6：统计单词数量**
-```python
+```Python
 str1 = "I love Python"
 words = str1.split()
 print("I love Python的单词数量为", len(words))
 ```
 
 #### **题目 7：字符串替换**
-```python
+```Python
 print("hello world".replace(" ","#"))
 
 ```
 
 #### **题目 8：格式化输出**
-```python
+```Python
 str1 = input("请输入一串字符串：")
 print(str1.title())
 ```
 
 #### **题目 9：查找子字符串的位置**
-```python
+```Python
 str1 = input("请输入一串字符串：")
 str2 = input("请输入一串查找字符串：")
 
@@ -156,7 +156,7 @@ print(str1.find(str2))
 ```
 
 #### **题目 10：生成用户名和邮箱**
-```python
+```Python
 str1 = input("请输入姓名：")
 str2 = input("请输入网站名：")
 

@@ -36,7 +36,7 @@
 
 ## 题目9：学生成绩筛选  
 **任务**：给定学生数据列表：  
-```python
+```Python
 students = [
     {"name": "Alice", "score": 85},
     {"name": "Bob", "score": 72},

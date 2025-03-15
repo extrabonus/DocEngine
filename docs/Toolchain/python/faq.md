@@ -12,7 +12,7 @@
 - 代码追求简洁性和可读性  
 
 **示例**：
-```python
+```Python
 s = ["apple", "banana", "cherry"]
 
 # ✅ 直接遍历元素
@@ -33,7 +33,7 @@ for fruit in s:
 - 需要修改原序列中的元素值  
 
 **示例**：
-```python
+```Python
 s = ["apple", "banana", "cherry"]
 
 # ✅ 遍历索引
@@ -63,7 +63,7 @@ for i in range(len(s)):
 <br/>
 
 ##### 错误 1：混淆索引和元素
-```python
+```Python
 s = ["a", "b", "c"]
 for i in s:
     print(s[i])  # ❌ 错误！i 已经是元素，不是索引
@@ -71,13 +71,13 @@ for i in s:
 
 **修正**：  
 - 如果要用索引，循环应遍历 `range(len(s))`：
-```python
+```Python
 for i in range(len(s)):
     print(s[i])  # ✅ 正确
 ```
 
 ##### 错误 2：不必要的索引遍历
-```python
+```Python
 s = [10, 20, 30]
 for i in range(len(s)):
     print(s[i])  # ❌ 可以简化成直接遍历元素
@@ -85,7 +85,7 @@ for i in range(len(s)):
 
 **修正**：  
 - 直接遍历元素更简洁：
-```python
+```Python
 for num in s:
     print(num)  # ✅ 正确
 ```
@@ -96,14 +96,14 @@ for num in s:
 <br/>
 
 ##### 用 `enumerate` 同时获取索引和元素
-```python
+```Python
 s = ["apple", "banana", "cherry"]
 for index, fruit in enumerate(s):
     print(f"第 {index} 个水果是 {fruit}")
 ```
 
 ##### 用 `zip` 遍历多个序列
-```python
+```Python
 names = ["Alice", "Bob"]
 ages = [25, 30]
 for name, age in zip(names, ages):

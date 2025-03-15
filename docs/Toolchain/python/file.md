@@ -17,7 +17,7 @@
 - `newline`：可选，换行符控制（如`'\n'`、`'\r\n'`）。
 
 **示例**：
-```python
+```Python
 # 读取文本文件（自动关闭）
 with open('data.txt', 'r', encoding='utf-8') as f:
     content = f.read()
@@ -32,7 +32,7 @@ with open('image.jpg', 'wb') as f:
 ### `read(size=-1)`
 **描述**：读取指定字节数（文本模式为字符数），默认读取全部内容。  
 **示例**：
-```python
+```Python
 with open('log.txt', 'r') as f:
     chunk = f.read(1024)  # 读取前1024个字符
 ```
@@ -40,7 +40,7 @@ with open('log.txt', 'r') as f:
 ### `readline(size=-1)`
 **描述**：逐行读取，保留换行符`\n`。  
 **示例**：
-```python
+```Python
 with open('data.csv', 'r') as f:
     header = f.readline()  # 读取标题行
 ```
@@ -48,7 +48,7 @@ with open('data.csv', 'r') as f:
 ### `readlines(hint=-1)`
 **描述**：读取所有行并返回列表，`hint`限制总字节数。  
 **示例**：
-```python
+```Python
 with open('log.log', 'r') as f:
     lines = f.readlines()  # 适用于小文件
 ```
@@ -58,7 +58,7 @@ with open('log.log', 'r') as f:
 ### `write(s)`
 **描述**：写入字符串或字节流，返回写入字符/字节数。  
 **示例**：
-```python
+```Python
 with open('output.txt', 'w') as f:
     f.write('Hello World\n')  # 覆盖写入
 ```
@@ -66,7 +66,7 @@ with open('output.txt', 'w') as f:
 ### `writelines(lines)`
 **描述**：写入字符串列表（不会自动添加换行符）。  
 **示例**：
-```python
+```Python
 lines = ['Line 1\n', 'Line 2\n']
 with open('notes.txt', 'a') as f:
     f.writelines(lines)  # 追加多行
@@ -79,7 +79,7 @@ with open('notes.txt', 'a') as f:
 - `whence`：参考点（0=文件头，1=当前位置，2=文件尾）。
   
 **示例**：
-```python
+```Python
 with open('data.bin', 'rb') as f:
     f.seek(10)  # 跳转到第10字节
     data = f.read(5) #从第10字节起读5个字节
@@ -88,7 +88,7 @@ with open('data.bin', 'rb') as f:
 ### `tell()`
 **描述**：返回当前文件指针的位置。  
 **示例**：
-```python
+```Python
 with open('log.txt', 'r') as f:
     f.read(100)
     pos = f.tell()  # 获取当前位置（如100）
@@ -99,7 +99,7 @@ with open('log.txt', 'r') as f:
 ### `close()`
 **描述**：手动关闭文件（推荐使用`with`语句自动管理）。  
 **示例**：
-```python
+```Python
 f = open('temp.txt', 'w')
 f.close()  # 必须显式关闭
 ```
@@ -109,7 +109,7 @@ f.close()  # 必须显式关闭
 ### `try-except`块
 **描述**：处理文件操作中的异常（如文件不存在、权限错误）。  
 **示例**：
-```python
+```Python
 try:
     with open('missing.txt', 'r') as f:
         content = f.read()

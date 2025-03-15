@@ -8,7 +8,7 @@
 - Built-in：Python内置的变量，比如内置函数或异常类。
 
 **示例**:
-```python
+```Python
 x = 10  # Global
 
 def func():
@@ -21,7 +21,7 @@ print(x)     # 输出: 10
 
 ## `nonlocal`关键字
 如果内层函数需要 修改 外层变量（而非读取），必须用 `nonlocal` 声明：
-```python
+```Python
 def outer():
     x = 1
     def inner():
@@ -40,7 +40,7 @@ def outer():
 - **外部函数返回内部函数**：父函数将子函数作为返回值返回。
 
 **示例**:
-```python
+```Python
 def outer():  # 外层函数
     x = 10  # 外层函数的局部变量
 
@@ -67,7 +67,7 @@ print(closure())  # 输出 15
 - **语法**：通过@装饰器名的语法糖实现，使代码简洁易读。
 
 **示例**:
-```python
+```Python
 # 给函数添加“打印执行时间”的功能。
 import time
 
@@ -114,7 +114,7 @@ my_function()
 **描述**: 匿名函数，用于简化简单操作的定义。  
 
 **示例**:
-```python
+```Python
 square = lambda x: x ** 2
 print(square(4))  # 输出: 16
 
@@ -138,7 +138,7 @@ print(list(map(lambda x: x*2, nums)))  # 输出: [2, 4, 6]
 - 再次迭代时从上次暂停的位置继续执行。
 
 **示例**：
-```python
+```Python
 def count_up_to(n):
     count = 1
     while count <= n:
@@ -163,7 +163,7 @@ print(next(counter))  # 3
 - 适合简单的一次性迭代场景。
 
 **示例**：
-```python
+```Python
 # 生成器表达式
 squares = (x**2 for x in range(5))
 
@@ -176,7 +176,7 @@ for num in squares:
 **描述**: 函数调用自身实现循环逻辑。  
 
 **示例**:
-```python
+```Python
 def factorial(n):
     return 1 if n <= 1 else n * factorial(n-1)
 
@@ -197,7 +197,7 @@ print(factorial(5))  # 输出: 120
    - 再将 **第 n 个圆盘** 从 `A → C`；
    - 最后将 **前 n-1 个圆盘** 从 `B → C`（借助 A 作为中转）。
 
-```python
+```Python
 def hanoi(n, source, auxiliary, target):
     """
     n: 圆盘数量

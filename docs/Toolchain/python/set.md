@@ -6,7 +6,7 @@
 - `element`: 要添加的元素。  
 
 **示例**:
-```python
+```Python
 s = {1, 2}
 s.add(3)
 print(s)  # 输出: {1, 2, 3}
@@ -20,7 +20,7 @@ print(s)  # 输出: {1, 2, 3}
 **参数**: 无  
 
 **示例**:
-```python
+```Python
 s = {1, 2, 3}
 s.clear()
 print(s)  # 输出: set()
@@ -32,7 +32,7 @@ print(s)  # 输出: set()
 **参数**: 无  
 
 **示例**:
-```python
+```Python
 s = {1, 2, 3}
 s_copy = s.copy()
 print(s_copy)  # 输出: {1, 2, 3}
@@ -45,7 +45,7 @@ print(s_copy)  # 输出: {1, 2, 3}
 - `*others`: 一个或多个集合。  
 
 **示例**:
-```python
+```Python
 s1 = {1, 2, 3}
 s2 = {2, 3, 4}
 print(s1.difference(s2))  # 输出: {1}
@@ -58,7 +58,7 @@ print(s1.difference(s2))  # 输出: {1}
 - `*others`: 一个或多个集合。  
 
 **示例**:
-```python
+```Python
 s1 = {1, 2, 3}
 s2 = {2, 3, 4}
 s1.difference_update(s2)
@@ -72,7 +72,7 @@ print(s1)  # 输出: {1}
 - `element`: 要移除的元素。  
 
 **示例**:
-```python
+```Python
 s = {1, 2, 3}
 s.discard(2)
 print(s)  # 输出: {1, 3}
@@ -87,7 +87,7 @@ print(s)  # 输出: {1, 3}
 - `*others`: 一个或多个集合。  
 
 **示例**:
-```python
+```Python
 s1 = {1, 2, 3}
 s2 = {2, 3, 4}
 print(s1.intersection(s2))  # 输出: {2, 3}
@@ -100,7 +100,7 @@ print(s1.intersection(s2))  # 输出: {2, 3}
 - `*others`: 一个或多个集合。  
 
 **示例**:
-```python
+```Python
 s1 = {1, 2, 3}
 s2 = {2, 3, 4}
 s1.intersection_update(s2)
@@ -114,7 +114,7 @@ print(s1)  # 输出: {2, 3}
 - `other`: 另一个集合。  
 
 **示例**:
-```python
+```Python
 s1 = {1, 2}
 s2 = {3, 4}
 print(s1.isdisjoint(s2))  # 输出: True
@@ -129,7 +129,7 @@ print(s1.isdisjoint(s3))  # 输出: False
 - `other`: 另一个集合。  
 
 **示例**:
-```python
+```Python
 s1 = {1, 2}
 s2 = {1, 2, 3}
 print(s1.issubset(s2))  # 输出: True
@@ -144,7 +144,7 @@ print(s1.issubset(s3))  # 输出: False
 - `other`: 另一个集合。  
 
 **示例**:
-```python
+```Python
 s1 = {1, 2, 3}
 s2 = {1, 2}
 print(s1.issuperset(s2))  # 输出: True
@@ -158,7 +158,7 @@ print(s1.issuperset(s3))  # 输出: False
 **参数**: 无  
 
 **示例**:
-```python
+```Python
 s = {1, 2, 3}
 print(s.pop())  # 输出: 1（具体值可能不同）
 print(s)        # 输出: {2, 3}
@@ -171,7 +171,7 @@ print(s)        # 输出: {2, 3}
 - `element`: 要移除的元素。  
 
 **示例**:
-```python
+```Python
 s = {1, 2, 3}
 s.remove(2)
 print(s)  # 输出: {1, 3}
@@ -184,7 +184,7 @@ print(s)  # 输出: {1, 3}
 - `other`: 另一个集合。  
 
 **示例**:
-```python
+```Python
 s1 = {1, 2, 3}
 s2 = {2, 3, 4}
 print(s1.symmetric_difference(s2))  # 输出: {1, 4}
@@ -198,7 +198,7 @@ print(s1.symmetric_difference(s2))  # 输出: {1, 4}
 - `other`: 另一个集合。  
 
 **示例**:
-```python
+```Python
 s1 = {1, 2, 3}
 s2 = {2, 3, 4}
 s1.symmetric_difference_update(s2)
@@ -212,7 +212,7 @@ print(s1)  # 输出: {1, 4}
 - `*others`: 一个或多个集合。  
 
 **示例**:
-```python
+```Python
 s1 = {1, 2}
 s2 = {2, 3}
 print(s1.union(s2))  # 输出: {1, 2, 3}
@@ -225,7 +225,7 @@ print(s1.union(s2))  # 输出: {1, 2, 3}
 - `*others`: 一个或多个集合。  
 
 **示例**:
-```python
+```Python
 s1 = {1, 2}
 s2 = {2, 3}
 s1.update(s2)

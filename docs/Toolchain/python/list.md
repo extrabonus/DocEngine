@@ -9,7 +9,7 @@
 - `x`: 要统计的元素  
 
 **示例**:
-```python
+```Python
 my_list = [1, 2, 3, 2, 4, 2]
 print(my_list.count(2))        # 输出: 3
 print(my_list.count(5))        # 输出: 0
@@ -24,7 +24,7 @@ print(my_list.count(5))        # 输出: 0
 - `start`/`end` (可选): 搜索的起始和结束索引 
    
 **示例**:
-```python
+```Python
 my_list = [1, 2, 3, 2, 5]
 print(my_list.index(2))        # 输出: 1
 print(my_list.index(2, 2, 4))  # 输出: 3
@@ -38,7 +38,7 @@ print(my_list.index(2, 2, 4))  # 输出: 3
 - `x`: 要添加的元素 
    
 **示例**:
-```python
+```Python
 my_list = [1, 2, 3]
 my_list.append(4)
 print(my_list)                 # 输出: [1, 2, 3, 4]
@@ -52,7 +52,7 @@ print(my_list)                 # 输出: [1, 2, 3, 4]
 - `iterable`: 可迭代对象（如列表、元组、字符串等）  
   
 **示例**:
-```python
+```Python
 my_list = [1, 2]
 my_list.extend([3, "a"])
 print(my_list)                 # 输出: [1, 2, 3, 'a']
@@ -67,7 +67,7 @@ print(my_list)                 # 输出: [1, 2, 3, 'a']
 - `x`: 要插入的元素  
   
 **示例**:
-```python
+```Python
 my_list = [1, 3, 4]
 my_list.insert(1, 2)
 print(my_list)                 # 输出: [1, 2, 3, 4]
@@ -81,7 +81,7 @@ print(my_list)                 # 输出: [1, 2, 3, 4]
 - `x`: 要移除的元素  
   
 **示例**:
-```python
+```Python
 my_list = [1, 2, 3, 2]
 my_list.remove(2)
 print(my_list)                 # 输出: [1, 3, 2]
@@ -95,7 +95,7 @@ print(my_list)                 # 输出: [1, 3, 2]
 - `i` (可选): 要移除的元素的索引  
   
 **示例**:
-```python
+```Python
 my_list = [1, 2, 3]
 popped = my_list.pop(1)
 print(popped, my_list)         # 输出: 2 [1, 3]
@@ -107,7 +107,7 @@ print(popped, my_list)         # 输出: 2 [1, 3]
 **描述**: 原地反转列表元素的顺序。  
 **参数**: 无  
 **示例**:
-```python
+```Python
 my_list = [1, 3, 2]
 my_list.reverse()
 print(my_list)                 # 输出: [2, 3, 1]
@@ -122,7 +122,7 @@ print(my_list)                 # 输出: [2, 3, 1]
 - `reverse` (可选): 若为 `True` 则降序排列  
   
 **示例**:
-```python
+```Python
 my_list = [3, 1, 4, 2]
 my_list.sort()
 print(my_list)                 # 输出: [1, 2, 3, 4]
@@ -134,7 +134,7 @@ print(my_list)                 # 输出: [1, 2, 3, 4]
 **描述**: 返回列表的浅拷贝。  
 **参数**: 无 
 **示例**:
-```python
+```Python
 my_list = [1, 2, 3]
 new_list = my_list.copy()
 new_list.append(4)
@@ -147,7 +147,7 @@ print(my_list)                 # 输出: [1, 2, 3]
 **描述**: 移除列表中的所有元素。  
 **参数**: 无  
 **示例**:
-```python
+```Python
 my_list = [1, 2, 3]
 my_list.clear()
 print(my_list)                 # 输出: []
@@ -157,14 +157,14 @@ print(my_list)                 # 输出: []
 ## 切片操作（Slice）
 
 ### 基础语法
-```python
+```Python
 列表[起始索引:结束索引:步长]  # 左闭右开区间（包含起始，不包含结束）
 ```
 
 ### 常用场景
 
 #### 获取子列表
-```python
+```Python
 my_list = [0, 1, 2, 3, 4, 5]
 
 print(my_list[1:4])       # 输出: [1, 2, 3]（索引1到3）
@@ -173,21 +173,21 @@ print(my_list[-3:])       # 输出: [3, 4, 5]（倒数第三个到末尾）
 ```
 
 #### 修改多个元素
-```python
+```Python
 my_list = [0, 1, 2, 3]
 my_list[1:3] = [10, 20]   # 替换索引1和2的元素
 print(my_list)            # 输出: [0, 10, 20, 3]
 ```
 
 #### 反转列表
-```python
+```Python
 my_list = [1, 2, 3]
 reversed_list = my_list[::-1]
 print(reversed_list)      # 输出: [3, 2, 1]
 ```
 
 #### 复制列表（浅拷贝）
-```python
+```Python
 original = [[1, 2], 3]
 copied = original[:]      # 浅拷贝：嵌套列表的引用会被保留
 copied[0][0] = 100
@@ -197,13 +197,13 @@ print(original)           # 输出: [[100, 2], 3]
 ### 高级技巧
 
 #### 动态调整步长
-```python
+```Python
 my_list = [0, 1, 2, 3, 4, 5]
 print(my_list[1:5:2])     # 输出: [1, 3]（步长为2）
 ```
 
 #### 结合条件筛选
-```python
+```Python
 # 配合循环或filter使用（切片本身不支持条件表达式）
 my_list = [0, 1, 2, 3, 4]
 even_indices = [x for i, x in enumerate(my_list) if i % 2 == 0]
@@ -212,12 +212,12 @@ print(even_indices)       # 输出: [0, 2, 4]
 
 ### 注意事项
 **索引越界不会报错**：自动截断到有效范围。
-  ```python
+  ```Python
   my_list = [1, 2]
   print(my_list[0:10])    # 输出: [1, 2]
   ```
 **步长为负数时反向切片**：
-  ```python
+  ```Python
   my_list = [0, 1, 2, 3]
   print(my_list[3:0:-1])  # 输出: [3, 2, 1]
   ```
@@ -226,33 +226,33 @@ print(even_indices)       # 输出: [0, 2, 4]
 ## 列表推导式（List Comprehension）
 
 ### 基础语法
-```python
+```Python
 [表达式 for 变量 in 可迭代对象 if 条件]
 ```
 
 ### 常用场景
 
 #### 简单转换
-```python
+```Python
 squares = [x**2 for x in range(5)]
 print(squares)            # 输出: [0, 1, 4, 9, 16]
 ```
 
 #### 条件筛选
-```python
+```Python
 even_numbers = [x for x in range(10) if x % 2 == 0]
 print(even_numbers)       # 输出: [0, 2, 4, 6, 8]
 ```
 
 #### 多重循环（嵌套）
-```python
+```Python
 matrix = [[1, 2], [3, 4]]
 flattened = [num for row in matrix for num in row]
 print(flattened)          # 输出: [1, 2, 3, 4]
 ```
 
 #### 复杂表达式
-```python
+```Python
 # 将字符串列表转为整数，跳过无效值
 str_list = ["1", "2", "a", "3"]
 int_list = [int(s) for s in str_list if s.isdigit()]
@@ -262,20 +262,20 @@ print(int_list)           # 输出: [1, 2, 3]
 ### 高级技巧
 
 #### 使用 `if-else` 表达式
-```python
+```Python
 # 注意：if-else 放在表达式前
 values = [x if x % 2 == 0 else -x for x in range(5)]
 print(values)             # 输出: [0, -1, 2, -3, 4]
 ```
 
 #### 生成嵌套列表（多维数组）
-```python
+```Python
 matrix = [[i * j for j in range(3)] for i in range(2)]
 print(matrix)             # 输出: [[0, 0, 0], [0, 1, 2]]
 ```
 
 #### 结合函数或方法
-```python
+```Python
 words = ["  apple ", "banana  ", "  cherry  "]
 trimmed = [word.strip().upper() for word in words]
 print(trimmed)            # 输出: ['APPLE', 'BANANA', 'CHERRY']
@@ -283,7 +283,7 @@ print(trimmed)            # 输出: ['APPLE', 'BANANA', 'CHERRY']
 
 ### 注意事项
 **避免副作用**：列表推导式应专注于生成数据，而非执行操作。
-  ```python
+  ```Python
   # 不推荐写法（副作用）
   [print(x) for x in range(3)]  # 输出: 0 1 2（但返回 [None, None, None]）
   ```
@@ -295,14 +295,14 @@ print(trimmed)            # 输出: ['APPLE', 'BANANA', 'CHERRY']
 ## 综合使用
 
 ### 切片 + 推导式（处理子集）
-```python
+```Python
 my_list = [0, 1, 2, 3, 4]
 subset = [x * 2 for x in my_list[1:-1]]
 print(subset)             # 输出: [2, 4, 6]
 ```
 
 ### 推导式生成字典/集合
-```python
+```Python
 # 字典推导式
 square_dict = {x: x**2 for x in range(3)}
 print(square_dict)        # 输出: {0: 0, 1: 1, 2: 4}

@@ -7,7 +7,7 @@
 - `-> return_type`：返回值类型注释（可选）
 
 **示例**：
-```python
+```Python
 def add(a: int, b: int = 0) -> int:
     """返回两个整数的和"""
     return a + b
@@ -16,13 +16,13 @@ def add(a: int, b: int = 0) -> int:
 
 ## 文档字符串（Docstring）
 ### 基础文档
-```python
+```Python
 def func():
     """单行文档描述"""
 ```
 
 ### 多行文档（推荐PEP 257风格）
-```python
+```Python
 def calculate(a: float, b: float) -> float:
     """
     执行复杂数学计算
@@ -47,14 +47,14 @@ def calculate(a: float, b: float) -> float:
 
 ## 类型注释（Type Hints）
 ### 基础类型标注
-```python
+```Python
 def greet(name: str, times: int = 1) -> None:
     for _ in range(times):
         print(f"Hello {name}!")
 ```
 
 ### 复合类型（需导入typing）
-```python
+```Python
 from typing import List, Dict, Union
 
 def process_data(
@@ -65,7 +65,7 @@ def process_data(
 ```
 
 ### 类型别名
-```python
+```Python
 UserId = int
 UserInfo = Dict[str, Union[str, List[str]]]
 
@@ -75,19 +75,19 @@ def get_user(user_id: UserId) -> UserInfo:
 
 ##  内省（Introspection）
 ### 查看文档
-```python
+```Python
 print(calculate.__doc__)  # 查看原始文档字符串
 help(calculate)           # 格式化帮助信息
 ```
 
 ### 查看类型注释
-```python
+```Python
 print(add.__annotations__)
 # 输出: {'a': <class 'int'>, 'b': <class 'int'>, 'return': <class 'int'>}
 ```
 
 ### 使用inspect模块
-```python
+```Python
 import inspect
 
 def demo(a: int, b: float = 0.0) -> str:
@@ -103,7 +103,7 @@ print(inspect.getfullargspec(demo))
 
 
 ## 完整示例
-```python
+```Python
 from typing import Optional
 
 def format_name(

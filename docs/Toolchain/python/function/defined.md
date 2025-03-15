@@ -7,7 +7,7 @@
 - `obj`：需要计算长度的对象。
 
 **示例**：
-```python
+```Python
 s = "hello"
 print(len(s))          # 输出: 5
 lst = [1, 2, 3]
@@ -23,7 +23,7 @@ print(len(lst))        # 输出: 3
 - `step`：步长（可选，默认1）。
 
 **示例**：
-```python
+```Python
 print(list(range(3)))        # 输出: [0, 1, 2]
 print(list(range(1, 5, 2)))  # 输出: [1, 3]
 ```
@@ -37,7 +37,7 @@ print(list(range(1, 5, 2)))  # 输出: [1, 3]
 - `end`：结束符（默认换行）。
 
 **示例**：
-```python
+```Python
 print("Hello", "World", sep="-")  # 输出: Hello-World
 print("No newline", end="")       # 输出后不换行
 ```
@@ -49,7 +49,7 @@ print("No newline", end="")       # 输出后不换行
 - `obj`：任意对象。
 
 **示例**：
-```python
+```Python
 print(type(42))          # 输出: <class 'int'>
 print(type([1, 2]))      # 输出: <class 'list'>
 ```
@@ -61,7 +61,7 @@ print(type([1, 2]))      # 输出: <class 'list'>
 - `iterable`：字符串、元组、集合等可迭代对象。
 
 **示例**：
-```python
+```Python
 t = (1, 2, 3)
 print(list(t))          # 输出: [1, 2, 3]
 print(list("abc"))      # 输出: ['a', 'b', 'c']
@@ -75,7 +75,7 @@ print(list("abc"))      # 输出: ['a', 'b', 'c']
 - `iterable`：可迭代的键值对（如 `[('a', 1)]`）。
 
 **示例**：
-```python
+```Python
 d1 = dict(a=1, b=2)
 d2 = dict([('x', 10), ('y', 20)])
 print(d1)  # 输出: {'a': 1, 'b': 2}
@@ -89,7 +89,7 @@ print(d2)  # 输出: {'x': 10, 'y': 20}
 - `obj`：任意对象（数字、列表等）。
 
 **示例**：
-```python
+```Python
 num = 3.14
 print(str(num) + " is float")  # 输出: 3.14 is float
 print(str([1, 2]))             # 输出: [1, 2]
@@ -103,7 +103,7 @@ print(str([1, 2]))             # 输出: [1, 2]
 - `base`：进制（默认十进制）。
 
 **示例**：
-```python
+```Python
 print(int("42"))         # 输出: 42
 print(int("1010", 2))    # 输出: 10 （二进制转十进制）
 ```
@@ -117,7 +117,7 @@ print(int("1010", 2))    # 输出: 10 （二进制转十进制）
 - `reverse`：是否降序（默认升序）。
 
 **示例**：
-```python
+```Python
 nums = [3, 1, 4]
 print(sorted(nums))                # 输出: [1, 3, 4]
 print(sorted(nums, reverse=True)) # 输出: [4, 3, 1]
@@ -131,7 +131,7 @@ print(sorted(nums, reverse=True)) # 输出: [4, 3, 1]
 - `start`：起始索引（默认0）。
 
 **示例**：
-```python
+```Python
 fruits = ["apple", "banana"]
 for i, fruit in enumerate(fruits):
     print(f"{i}: {fruit}")
@@ -147,7 +147,7 @@ for i, fruit in enumerate(fruits):
 - `*iterables`：多个可迭代对象（如列表、字符串）。
 
 **示例**：
-```python
+```Python
 names = ["Alice", "Bob"]
 ages = [25, 30]
 print(list(zip(names, ages)))  # 输出: [('Alice', 25), ('Bob', 30)]
@@ -161,7 +161,7 @@ print(list(zip(names, ages)))  # 输出: [('Alice', 25), ('Bob', 30)]
 - `iterable`：可迭代对象（如列表、字符串）。
 
 **示例**：
-```python
+```Python
 nums = [5, 2, 8]
 print(max(nums))  # 输出: 8
 print(min("abc")) # 输出: 'a'（按ASCII码比较）
@@ -175,7 +175,7 @@ print(min("abc")) # 输出: 'a'（按ASCII码比较）
 - `start`：累加初始值（默认0）。
 
 **示例**：
-```python
+```Python
 print(sum([1, 2, 3]))        # 输出: 6
 print(sum([1.5, 2], start=3))# 输出: 6.5
 ```
@@ -188,7 +188,7 @@ print(sum([1.5, 2], start=3))# 输出: 6.5
 - `classinfo`：类型或类型元组。
 
 **示例**：
-```python
+```Python
 print(isinstance(10, int))   # 输出: True
 print(isinstance("hi", (int, str)))  # 输出: True
 ```
@@ -202,7 +202,7 @@ print(isinstance("hi", (int, str)))  # 输出: True
 - `encoding`：编码格式（如 `utf-8`）。
 
 **示例**：
-```python
+```Python
 with open("data.txt", "r", encoding="utf-8") as f:
     content = f.read()
 ```

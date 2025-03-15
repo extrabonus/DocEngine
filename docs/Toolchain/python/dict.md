@@ -5,7 +5,7 @@
 **描述**: 移除字典中的所有键值对，使字典变为空字典。  
 **参数**: 无  
 **示例**:
-```python
+```Python
 d = {"a": 1, "b": 2}
 d.clear()
 print(d)  # 输出: {}
@@ -16,7 +16,7 @@ print(d)  # 输出: {}
 **描述**: 返回字典的浅拷贝。  
 **参数**: 无  
 **示例**:
-```python
+```Python
 d = {"a": 1, "b": 2}
 d_copy = d.copy()
 print(d_copy)  # 输出: {"a": 1, "b": 2}
@@ -30,7 +30,7 @@ print(d_copy)  # 输出: {"a": 1, "b": 2}
 - `value` (可选): 所有键的默认值。  
 
 **示例**:
-```python
+```Python
 keys = ["a", "b", "c"]
 d = dict.fromkeys(keys, 0)
 print(d)  # 输出: {"a": 0, "b": 0, "c": 0}
@@ -44,7 +44,7 @@ print(d)  # 输出: {"a": 0, "b": 0, "c": 0}
 - `default` (可选): 键不存在时返回的默认值。  
 
 **示例**:
-```python
+```Python
 d = {"a": 1, "b": 2}
 print(d.get("a"))        # 输出: 1
 print(d.get("c", "Not Found"))  # 输出: "Not Found"
@@ -55,7 +55,7 @@ print(d.get("c", "Not Found"))  # 输出: "Not Found"
 **描述**: 返回字典的键值对视图，每个键值对以元组形式表示。  
 **参数**: 无  
 **示例**:
-```python
+```Python
 d = {"a": 1, "b": 2}
 print(d.items())  # 输出: dict_items([("a", 1), ("b", 2)])
 ```
@@ -65,7 +65,7 @@ print(d.items())  # 输出: dict_items([("a", 1), ("b", 2)])
 **描述**: 返回字典的键视图。  
 **参数**: 无  
 **示例**:
-```python
+```Python
 d = {"a": 1, "b": 2}
 print(d.keys())  # 输出: dict_keys(["a", "b"])
 ```
@@ -75,7 +75,7 @@ print(d.keys())  # 输出: dict_keys(["a", "b"])
 **描述**: 返回字典的值视图。  
 **参数**: 无  
 **示例**:
-```python
+```Python
 d = {"a": 1, "b": 2}
 print(d.values())  # 输出: dict_values([1, 2])
 ```
@@ -88,7 +88,7 @@ print(d.values())  # 输出: dict_values([1, 2])
 - `default` (可选): 键不存在时返回的默认值。
   
 **示例**:
-```python
+```Python
 d = {"a": 1, "b": 2}
 print(d.pop("a"))        # 输出: 1
 print(d.pop("c", "Not Found"))  # 输出: "Not Found"
@@ -99,7 +99,7 @@ print(d.pop("c", "Not Found"))  # 输出: "Not Found"
 **描述**: 移除并返回字典中的最后一个键值对（LIFO 顺序）。如果字典为空，则抛出 `KeyError`。  
 **参数**: 无  
 **示例**:
-```python
+```Python
 d = {"a": 1, "b": 2}
 print(d.popitem())  # 输出: ("b", 2)
 print(d)            # 输出: {"a": 1}
@@ -113,7 +113,7 @@ print(d)            # 输出: {"a": 1}
 - `default` (可选): 键不存在时插入的默认值。  
 
 **示例**:
-```python
+```Python
 d = {"a": 1}
 print(d.setdefault("a", 0))  # 输出: 1
 print(d.setdefault("b", 2))  # 输出: 2
@@ -127,7 +127,7 @@ print(d)                     # 输出: {"a": 1, "b": 2}
 - `other`: 字典或可迭代对象（如键值对列表）。
   
 **示例**:
-```python
+```Python
 d = {"a": 1}
 d.update({"b": 2})
 print(d)  # 输出: {"a": 1, "b": 2}
@@ -140,7 +140,7 @@ print(d)  # 输出: {"a": 1, "b": 2}
 - `key`: 要查找的键。  
 
 **示例**:
-```python
+```Python
 d = {"a": 1}
 print("a" in d)  # 输出: True
 print("b" in d)  # 输出: False
@@ -151,7 +151,7 @@ print("b" in d)  # 输出: False
 **描述**: 返回字典中键值对的数量。通常使用 `len()` 函数调用。  
 **参数**: 无  
 **示例**:
-```python
+```Python
 d = {"a": 1, "b": 2}
 print(len(d))  # 输出: 2
 ```
@@ -163,7 +163,7 @@ print(len(d))  # 输出: 2
 - `key`: 要查找的键。  
 
 **示例**:
-```python
+```Python
 d = {"a": 1}
 print(d["a"])  # 输出: 1
 ```
@@ -176,7 +176,7 @@ print(d["a"])  # 输出: 1
 - `value`: 要设置的值。  
 
 **示例**:
-```python
+```Python
 d = {}
 d["a"] = 1
 print(d)  # 输出: {"a": 1}
@@ -190,7 +190,7 @@ print(d)  # 输出: {"a": 1}
 - `key`: 要移除的键。  
 
 **示例**:
-```python
+```Python
 d = {"a": 1}
 del d["a"]
 print(d)  # 输出: {}

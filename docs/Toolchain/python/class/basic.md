@@ -3,7 +3,7 @@
 ## **类（Class）**
 **描述**：类是创建对象的蓝图，定义了对象的属性（数据）和方法（行为）。类是抽象的模板。  
 **示例**：
-```python
+```Python
 class Dog:  # 定义类
     def bark(self):
         print("Woof!")
@@ -13,7 +13,7 @@ class Dog:  # 定义类
 ## **对象（Object）**
 **描述**：对象是类的实例，具有类中定义的属性和方法。对象是具体的实体。  
 **示例**：
-```python
+```Python
 my_dog = Dog()  # 创建对象
 my_dog.bark()   # 输出: Woof!
 ```
@@ -22,14 +22,14 @@ my_dog.bark()   # 输出: Woof!
 ## **实例化（Instantiation）**
 **描述**：通过类创建对象的过程，使用类名后加括号（可能需参数）完成。  
 **示例**：
-```python
+```Python
 dog = Dog()  # 实例化
 ```
 
 ## **构造函数（`__init__`）**
 **描述**：类中名为 `__init__` 的特殊方法，在对象创建时自动调用，用于初始化属性。  
 **示例**：
-```python
+```Python
 class Cat:
     def __init__(self, name):
         self.name = name  # 初始化属性
@@ -45,7 +45,7 @@ cat = Cat("Whiskers")  # 创建对象时传入参数
 - **静态方法**：与类无关的工具方法，用 `@staticmethod` 装饰，无 `self` 或 `cls`。  
 
 **示例**：
-```python
+```Python
 class Calculator:
     def add(self, a, b):       # 实例方法
         return a + b
@@ -67,7 +67,7 @@ class Calculator:
   - 在继承场景中，子类调用父类方法时，`cls` 会自动指向子类。
 
 **示例**
-```python
+```Python
 class Car:
     wheels = 4  # 类属性
 
@@ -102,7 +102,7 @@ print(tesla.brand)  # 输出: Tesla
   - 代码组织：将逻辑上属于类的函数放在类内部。
 
 **示例**
-```python
+```Python
 class MathUtils:
     @staticmethod
     def add(a, b):
@@ -123,7 +123,7 @@ print(MathUtils.is_valid_number(10)) # 输出: True
 ## **继承（Inheritance）**
 **描述**：子类继承父类的属性和方法，并可扩展或重写父类功能。  
 **示例**：
-```python
+```Python
 class Animal:                  # 父类
     def speak(self):
         print("Animal sound")
@@ -137,7 +137,7 @@ class Dog(Animal):             # 子类
 ## **多态（Polymorphism）**
 **描述**：不同类的对象对同一方法调用表现出不同行为（通过继承或接口实现）。  
 **示例**：
-```python
+```Python
 class Cat(Animal):
     def speak(self):
         print("Meow")
@@ -151,7 +151,7 @@ for animal in animals:
 ## **封装（Encapsulation）**
 **描述**：隐藏对象内部实现细节，通过公共方法控制对属性的访问。常用私有属性（以 `_` 或 `__` 开头）实现。  
 **示例**：
-```python
+```Python
 class BankAccount:
     def __init__(self):
         self.__balance = 0  # 私有属性
@@ -168,7 +168,7 @@ class BankAccount:
 - **类属性**：属于类本身，所有对象共享。  
 
 **示例**：
-```python
+```Python
 class Car:
     wheels = 4                # 类属性（所有车有4个轮子）
     def __init__(self, color):
@@ -179,7 +179,7 @@ class Car:
 ## **特殊方法（Magic Methods）**
 **描述**：以双下划线 `__` 开头和结尾的方法，用于实现运算符重载或对象行为（如 `__str__`, `__add__`）。  
 **示例**：
-```python
+```Python
 class Vector:
     def __init__(self, x, y):
         self.x = x
@@ -197,7 +197,7 @@ class Vector:
 - **私有属性**：以 `__` 开头，只能在类内部访问（实际通过名称修饰实现）。  
 
 **示例**：
-```python
+```Python
 class Student:
     def __init__(self, name):
         self.__name = name  # 私有属性
@@ -216,7 +216,7 @@ print(s.get_name())    # 输出: Alice
 - **聚合**：整体与部分可独立存在（如班级包含学生）。  
 
 **示例**：
-```python
+```Python
 class Engine:
     def start(self):
         print("Engine started")
@@ -233,7 +233,7 @@ car.engine.start()  # 输出: Engine started
 ## **抽象类（Abstract Class）**
 **描述**：不能被实例化的类，用于定义子类必须实现的方法（通过 `abc` 模块实现）。  
 **示例**：
-```python
+```Python
 from abc import ABC, abstractmethod
 
 class Shape(ABC):        # 抽象类

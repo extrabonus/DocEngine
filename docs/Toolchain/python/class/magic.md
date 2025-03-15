@@ -11,7 +11,7 @@
 - **`__str__`** 和 **`__repr__`**：定义对象的字符串表示（调试、日志必备）。
 - **`__enter__` 和 `__exit__`**：上下文管理器（资源管理如文件、数据库连接）。
 
-```python
+```Python
 class FileHandler:
     def __init__(self, filename):
         self.filename = filename
@@ -36,7 +36,7 @@ with FileHandler('data.txt') as f:
 - **`__getitem__` 和 `__setitem__`**：实现索引访问（模拟字典、列表）。
 - **`__call__`**：让对象可像函数一样调用（常用于装饰器或延迟计算）。
 
-```python
+```Python
 class Vector:
     def __init__(self, x, y):
         self.x = x
@@ -57,7 +57,7 @@ scaled_v = v(2)  # 返回 Vector(4, 6)
 - **`__getattr__` 和 `__setattr__`**：动态管理属性（实现代理、惰性加载）。
 - **`__slots__`**：优化内存（限制实例属性，适用于大量对象的场景）。
 
-```python
+```Python
 class LazyLoader:
     def __init__(self):
         self._data = None

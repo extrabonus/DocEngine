@@ -38,7 +38,7 @@
 ## **答案**
 
 ### **答案 1**
-```python
+```Python
 def value_frequency(d):
     freq = {}
     for value in d.values():
@@ -47,25 +47,25 @@ def value_frequency(d):
 ```
 
 ### **答案 2**
-```python
+```Python
 def merge_dicts(d1, d2):
     return {**d1, **d2}
 ```
 
 ### **答案 3**
-```python
+```Python
 def invert_dict(d):
     return {v: k for k, v in d.items()}
 ```
 
 ### **答案 4**
-```python
+```Python
 def filter_dict(d, keys):
     return {k: d[k] for k in keys if k in d}
 ```
 
 ### **答案 5**
-```python
+```Python
 def sum_values(d):
     return sum(d.values())
 ```

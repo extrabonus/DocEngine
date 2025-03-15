@@ -7,7 +7,7 @@
 - `value`: 要统计的值。  
 
 **示例**:
-```python
+```Python
 t = (1, 2, 3, 2, 4)
 print(t.count(2))  # 输出: 2
 ```
@@ -21,7 +21,7 @@ print(t.count(2))  # 输出: 2
 - `end` (可选): 搜索的结束位置。  
 
 **示例**:
-```python
+```Python
 t = (1, 2, 3, 2, 4)
 print(t.index(2))        # 输出: 1
 print(t.index(2, 2, 4))  # 输出: 3
@@ -34,7 +34,7 @@ print(t.index(2, 2, 4))  # 输出: 3
 - `other`: 另一个元组。  
 
 **示例**:
-```python
+```Python
 t1 = (1, 2)
 t2 = (3, 4)
 print(t1 + t2)  # 输出: (1, 2, 3, 4)
@@ -47,7 +47,7 @@ print(t1 + t2)  # 输出: (1, 2, 3, 4)
 - `value`: 要查找的值。  
 
 **示例**:
-```python
+```Python
 t = (1, 2, 3)
 print(2 in t)  # 输出: True
 print(4 in t)  # 输出: False
@@ -59,7 +59,7 @@ print(4 in t)  # 输出: False
 **参数**: 无  
 
 **示例**:
-```python
+```Python
 t = (1, 2, 3)
 print(len(t))  # 输出: 3
 ```
@@ -71,7 +71,7 @@ print(len(t))  # 输出: 3
 - `index`: 要查找的索引。  
 
 **示例**:
-```python
+```Python
 t = (1, 2, 3)
 print(t[1])  # 输出: 2
 ```
@@ -83,7 +83,7 @@ print(t[1])  # 输出: 2
 - `n`: 重复的次数。  
 
 **示例**:
-```python
+```Python
 t = (1, 2)
 print(t * 3)  # 输出: (1, 2, 1, 2, 1, 2)
 ```
@@ -94,7 +94,7 @@ print(t * 3)  # 输出: (1, 2, 1, 2, 1, 2)
 **参数**: 无  
 
 **示例**:
-```python
+```Python
 t = (1, 2, 3)
 for item in t:
     print(item)  # 输出: 1 2 3
@@ -107,7 +107,7 @@ for item in t:
 - `other`: 另一个元组。  
 
 **示例**:
-```python
+```Python
 t1 = (1, 2)
 t2 = (1, 2)
 print(t1 == t2)  # 输出: True
@@ -120,7 +120,7 @@ print(t1 == t2)  # 输出: True
 - `other`: 另一个元组。  
 
 **示例**:
-```python
+```Python
 t1 = (1, 2)
 t2 = (3, 4)
 print(t1 != t2)  # 输出: True
@@ -132,7 +132,7 @@ print(t1 != t2)  # 输出: True
 **参数**: 无  
 
 **示例**:
-```python
+```Python
 t = (1, 2, 3)
 print(hash(t))  # 输出: 一个整数哈希值
 ```
@@ -143,7 +143,7 @@ print(hash(t))  # 输出: 一个整数哈希值
 **参数**: 无  
 
 **示例**:
-```python
+```Python
 t = (1, 2, 3)
 print(str(t))  # 输出: "(1, 2, 3)"
 ```
@@ -154,7 +154,7 @@ print(str(t))  # 输出: "(1, 2, 3)"
 **参数**: 无  
 
 **示例**:
-```python
+```Python
 t = (1, 2, 3)
 print(repr(t))  # 输出: "(1, 2, 3)"
 ```
