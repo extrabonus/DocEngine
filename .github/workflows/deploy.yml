@@ -1,31 +1,21 @@
-name: Deploy to GitHub Pages
-
+name: Deploy
 on:
   push:
-    branches: [main] # 触发分支
-
+    branches: [main]
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build
-        run: npm run build
-
-      - name: Deploy
+      - name: Install Yarn
+        run: npm install -g yarn  # 全局安装 Yarn
+      - run: yarn install         # 替换 npm ci
+      - run: yarn build           # 替换 npm run build
+      - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .vitepress/dist
-          # 如果使用自定义域名，添加以下配置：
-          # cname: your-domain.com
+          publish_dir: ./distgit add dist && git commit -m "Deploy dist"
