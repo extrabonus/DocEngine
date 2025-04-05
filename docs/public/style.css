@@ -1,0 +1,23 @@
+/* 控制所有 Markdown 内容中的图片 */
+.content img {
+    /* 最大宽度限制（根据需求调整） */
+    max-width: 80%;
+    /* 自动高度保持比例 */
+    height: auto;
+    /* 灰色边框 */
+    border: 2px solid #e5e7eb;
+    /* 边框圆角 */
+    padding: 8px;
+    /* 外边距（上下 16px，左右自动居中） */
+    margin: 16px auto;
+    /* 确保图片居中 */
+    display: block;
+  }
+  
+  /* 移动端适配（可选） */
+  @media (max-width: 768px) {
+    .content img {
+      max-width: 100%;
+      padding: 4px;
+    }
+  }

@@ -8,7 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "vitepress build docs",
     "preview": "vitepress preview docs",
-    "dev": "vitepress dev docs"
+    "dev": "vitepress dev docs",
+    "deploy": "git add dist && git commit -m 'Deploy dist' && git subtree push --prefix dist origin gh-pages --force"
   },
   "keywords": [],
   "author": "",

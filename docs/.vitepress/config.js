@@ -3,11 +3,13 @@ import { fileURLToPath } from 'node:url'
 import path from 'node:path'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
-
 export default defineConfig({
   title: 'Jakei',
   outDir: path.resolve(__dirname, '../../dist'), // ✅ 修正路径层级
   base: '/DocEngine/',
+  // head:[
+  //   ['link', { rel: 'stylesheet', href: '/style.css' }]
+  // ],
   themeConfig: {
     outline: {
       level: [2, 3],
@@ -30,11 +32,15 @@ export default defineConfig({
       'Toolchain': [ // ✅ 移除冗余的 items 嵌套
         { 
           text: 'Markdown', 
-          link: '/Toolchain/Markdown'
+          link: '/Toolchain/markdown'
         },
         { 
           text: 'Git', 
           link: '/Toolchain/Git'
+        },
+        { 
+          text: 'Github pages', 
+          link: '/Toolchain/Gitpages'
         },
         { 
           text: 'Linux', 
