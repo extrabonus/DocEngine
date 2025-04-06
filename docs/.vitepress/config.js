@@ -6,11 +6,12 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 export default defineConfig({
   title: 'Jakei',
   outDir: path.resolve(__dirname, '../../dist'),
-  base: process.env.NODE_ENV === 'production' ? '/DocEngine/' : '/',  // 根据环境设置不同的 base
-  cleanUrls: false, // 设置为 false 以使用 .html 后缀
-  // head:[
-  //   ['link', { rel: 'stylesheet', href: '/style.css' }]
-  // ],
+  base: '/DocEngine/',  // 始终使用 /DocEngine/ 作为基础路径
+  cleanUrls: false,
+  ignoreDeadLinks: true,  // 忽略死链接检查
+  head: [
+    ['link', { rel: 'stylesheet', href: '/DocEngine/assets/style.css' }]
+  ],
   themeConfig: {
     outline: {
       level: [2, 3],
@@ -27,8 +28,8 @@ export default defineConfig({
     ],
     sidebar: {
       'Artifacts': [
-        { text: '技能介绍', link: '/Artifacts/index.html' },
-        { text: '技术图谱', link: '/Artifacts/123.html' }
+        { text: '技能介绍', link: '/Artifacts/index' },
+        { text: '技术图谱', link: '/Artifacts/123' }
       ],
       'Toolchain': [
         { text: 'Markdown', link: '/Toolchain/Markdown.html' },

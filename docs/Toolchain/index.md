@@ -3,9 +3,9 @@
 
 ## 目录
 
-- [Markdown](./Markdown.html)
-- [Git](./Git.html)
-- [Github pages](./Gitpages.html)
-- [Linux](./Linux.html)
-- [Postman](./postman.html)
-- [Python](./Python/index.html) 
+- [Markdown](/Toolchain/Markdown.html)
+- [Git](/Toolchain/Git.html)
+- [Github pages](/Toolchain/Gitpages.html)
+- [Linux](/Toolchain/Linux.html)
+- [Postman](/Toolchain/postman.html)
+- [Python](/Toolchain/Python/index.html) 

@@ -12,12 +12,12 @@
     margin: 16px auto;
     /* 确保图片居中 */
     display: block;
-  }
-  
-  /* 移动端适配（可选） */
-  @media (max-width: 768px) {
+}
+
+/* 移动端适配（可选） */
+@media (max-width: 768px) {
     .content img {
-      max-width: 100%;
-      padding: 4px;
+        max-width: 100%;
+        padding: 4px;
     }
-  }
+} 
