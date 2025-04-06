@@ -6,7 +6,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 export default defineConfig({
   title: 'Jakei',
   outDir: path.resolve(__dirname, '../../dist'),
-  base: '/',
+  base: process.env.NODE_ENV === 'production' ? '/DocEngine/' : '/',  // 根据环境设置不同的 base
   cleanUrls: false, // 设置为 false 以使用 .html 后缀
   // head:[
   //   ['link', { rel: 'stylesheet', href: '/style.css' }]
@@ -56,7 +56,35 @@ export default defineConfig({
                 { text: '内置函数', link: '/Toolchain/Python/function/defined.html' },
                 { text: '类型注释', link: '/Toolchain/Python/function/annotation.html' }
               ]
-            }
+            },
+            { 
+              text: '文件',
+              collapsed: true,
+              items: [
+                { text: '文件操作', link: '/Toolchain/Python/file.html' },
+                { text: '路径读取', link: '/Toolchain/Python/path.html' }
+              ]
+            },
+            { 
+              text: '类与对象',
+              collapsed: true,
+              items: [
+                { text: '基础概念', link: '/Toolchain/Python/class/basic.html' },
+                { text: '魔法方法', link: '/Toolchain/Python/class/magic.html' }
+              ]
+            },
+            { 
+              text: '最佳实践',
+              collapsed: true,
+              items: [
+                { text: '字符串', link: '/Toolchain/Python/practice/str_lesson.html' },
+                { text: '列表', link: '/Toolchain/Python/practice/list_lesson.html' },
+                { text: '字典', link: '/Toolchain/Python/practice/dict_lesson.html' },
+                { text: '函数', link: '/Toolchain/Python/practice/func_lesson.html' },
+                { text: '文件', link: '/Toolchain/Python/practice/file_lesson.html' }
+              ]
+            },
+            { text: '常见问题', link: '/Toolchain/Python/faq.html' }
           ]
         }
       ],

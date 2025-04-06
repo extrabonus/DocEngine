@@ -31,6 +31,8 @@ jobs:
           # 确保所有文件都有正确的权限
           find dist -type f -exec chmod 644 {} \;
           find dist -type d -exec chmod 755 {} \;
+          # 打印构建后的文件结构
+          find dist -type f
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
@@ -39,4 +41,4 @@ jobs:
           publish_dir: ./dist
           commit_message: "Deploy: $(date +'%Y-%m-%d %H:%M:%S')"
           force_orphan: true
-          destination_dir: DocEngine  # 添加目标目录
+          destination_dir: DocEngine
