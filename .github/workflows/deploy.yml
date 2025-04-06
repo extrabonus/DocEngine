@@ -39,3 +39,4 @@ jobs:
           publish_dir: ./dist
           commit_message: "Deploy: $(date +'%Y-%m-%d %H:%M:%S')"
           force_orphan: true
+          destination_dir: DocEngine  # 添加目标目录
