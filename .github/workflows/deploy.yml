@@ -28,9 +28,13 @@ jobs:
       - name: Build
         run: |
           npx vitepress build docs
+          # 确保所有文件都有正确的权限
+          find dist -type f -exec chmod 644 {} \;
+          find dist -type d -exec chmod 755 {} \;
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist  # 修改为实际的构建输出目录
+          publish_dir: ./dist
+          commit_message: "Deploy: $(date +'%Y-%m-%d %H:%M:%S')"
