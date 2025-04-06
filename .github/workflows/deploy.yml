@@ -1,21 +1,27 @@
 name: Deploy
+
 on:
   push:
-    branches: [main]
+    branches: [ main ]
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # 写入权限
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-      - name: Install Yarn
-        run: npm install -g yarn
-      - run: yarn install
-      - run: yarn build
-      - name: Deploy to gh-pages
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 此处添加你的构建步骤（例如：npm run build）
+      - name: Build
+        run: |
+          npm install
+          npm run build
+
+      # 部署到 gh-pages
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs/.vitepress/dist  # 指定子目录路径
+          publish_dir: ./docs/.vitepress/dist  # 替换为你的构建目录（如 public、out、docs 等）

@@ -32,7 +32,7 @@ export default defineConfig({
       'Toolchain': [ // ✅ 移除冗余的 items 嵌套
         { 
           text: 'Markdown', 
-          link: '/Toolchain/markdown'
+          link: '/Toolchain/Markdown'
         },
         { 
           text: 'Git', 
