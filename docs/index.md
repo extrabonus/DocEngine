@@ -15,16 +15,16 @@ hero:
   #     link: /api-examples
 
 features:
-  - title: ​Artifacts​
+  - title: Artifacts
     details: "Version-controlled repository for project deliverables: technical specs, user manuals, API documentation, and so on."
     icon: 📦
-    link: /​Artifacts/index
+    link: /Artifacts/index.html
   - title: Toolchain
     details: "Skill ecosystem for documentation engineering: Markdown/Git workflows, automation scripts, API tools, and collaboration platforms."
     icon: 🤖
-    link: /Toolchain/index
-  - title: Insights​
+    link: /Toolchain/index.html
+  - title: Insights
     details: "Strategic analysis hub with industry trends, business case studies, competitive landscapes, and product roadmap reflections."
     icon: 🔭
-    link: /Insights/index
+    link: /Insights/index.html
 ---
