@@ -38,3 +38,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           commit_message: "Deploy: $(date +'%Y-%m-%d %H:%M:%S')"
+          force_orphan: true

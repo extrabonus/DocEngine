@@ -20,82 +20,54 @@ export default defineConfig({
       provider: 'local'
     },
     nav: [
-      { text: 'Home', link: '/DocEngine/' },
-      { text: 'Artifacts', link: '/DocEngine/Artifacts/' },
-      { text: 'Toolchain', link: '/DocEngine/Toolchain/' },
-      { text: 'Insights', link: '/DocEngine/Insights/' }
+      { text: 'Home', link: '/' },
+      { text: 'Artifacts', link: '/Artifacts/' },
+      { text: 'Toolchain', link: '/Toolchain/' },
+      { text: 'Insights', link: '/Insights/' }
     ],
     sidebar: {
       'Artifacts': [
-        { text: '技能介绍', link: '/DocEngine/Artifacts/index.html' },
-        { text: '技术图谱', link: '/DocEngine/Artifacts/123.html' }
+        { text: '技能介绍', link: '/Artifacts/index.html' },
+        { text: '技术图谱', link: '/Artifacts/123.html' }
       ],
       'Toolchain': [
-        { text: 'Markdown', link: '/DocEngine/Toolchain/Markdown.html' },
-        { text: 'Git', link: '/DocEngine/Toolchain/Git.html' },
-        { text: 'Github pages', link: '/DocEngine/Toolchain/Gitpages.html' },
-        { text: 'Linux', link: '/DocEngine/Toolchain/Linux.html' },
-        { text: 'Postman', link: '/DocEngine/Toolchain/postman.html' },
+        { text: 'Markdown', link: '/Toolchain/Markdown.html' },
+        { text: 'Git', link: '/Toolchain/Git.html' },
+        { text: 'Github pages', link: '/Toolchain/Gitpages.html' },
+        { text: 'Linux', link: '/Toolchain/Linux.html' },
+        { text: 'Postman', link: '/Toolchain/postman.html' },
         { 
           text: 'Python',
           collapsed: true,
           items: [
-            { text: '基础语法', link: '/DocEngine/Toolchain/Python/index.html' },
-            { text: '字符串', link: '/DocEngine/Toolchain/Python/str.html' },
-            { text: '列表', link: '/DocEngine/Toolchain/Python/list.html' },
-            { text: '元组', link: '/DocEngine/Toolchain/Python/tuple.html' },
-            { text: '序列', link: '/DocEngine/Toolchain/Python/sequence.html' },
-            { text: '字典', link: '/DocEngine/Toolchain/Python/dict.html' },
-            { text: '集合', link: '/DocEngine/Toolchain/Python/set.html' },
+            { text: '基础语法', link: '/Toolchain/Python/index.html' },
+            { text: '字符串', link: '/Toolchain/Python/str.html' },
+            { text: '列表', link: '/Toolchain/Python/list.html' },
+            { text: '元组', link: '/Toolchain/Python/tuple.html' },
+            { text: '序列', link: '/Toolchain/Python/sequence.html' },
+            { text: '字典', link: '/Toolchain/Python/dict.html' },
+            { text: '集合', link: '/Toolchain/Python/set.html' },
             { 
               text: '函数',
               collapsed: true,
               items: [
-                { text: '基础用法', link: '/DocEngine/Toolchain/Python/function/basic.html' },
-                { text: '高阶用法', link: '/DocEngine/Toolchain/Python/function/advance.html' },
-                { text: '内置函数', link: '/DocEngine/Toolchain/Python/function/defined.html' },
-                { text: '类型注释', link: '/DocEngine/Toolchain/Python/function/annotation.html' }
+                { text: '基础用法', link: '/Toolchain/Python/function/basic.html' },
+                { text: '高阶用法', link: '/Toolchain/Python/function/advance.html' },
+                { text: '内置函数', link: '/Toolchain/Python/function/defined.html' },
+                { text: '类型注释', link: '/Toolchain/Python/function/annotation.html' }
               ]
-            },
-            { 
-              text: '文件',
-              collapsed: true,
-              items: [
-                { text: '文件操作', link: '/DocEngine/Toolchain/Python/file.html' },
-                { text: '路径读取', link: '/DocEngine/Toolchain/Python/path.html' }
-              ]
-            },
-            { 
-              text: '类与对象',
-              collapsed: true,
-              items: [
-                { text: '基础概念', link: '/DocEngine/Toolchain/Python/class/basic.html' },
-                { text: '魔法方法', link: '/DocEngine/Toolchain/Python/class/magic.html' }
-              ]
-            },
-            { 
-              text: '最佳实践',
-              collapsed: true,
-              items: [
-                { text: '字符串', link: '/DocEngine/Toolchain/Python/practice/str_lesson.html' },
-                { text: '列表', link: '/DocEngine/Toolchain/Python/practice/list_lesson.html' },
-                { text: '字典', link: '/DocEngine/Toolchain/Python/practice/dict_lesson.html' },
-                { text: '函数', link: '/DocEngine/Toolchain/Python/practice/func_lesson.html' },
-                { text: '文件', link: '/DocEngine/Toolchain/Python/practice/file_lesson.html' }
-              ]
-            },
-            { text: '常见问题', link: '/DocEngine/Toolchain/Python/faq.html' }
+            }
           ]
         }
       ],
       'Insights': [
         { 
           text: '当信息过载遭遇AI革命', 
-          link: '/DocEngine/Insights/Infoverload.html'
+          link: '/Insights/Infoverload.html'
         },
         { 
           text: '项目案例', 
-          link: '/DocEngine/Insights/789.html'
+          link: '/Insights/789.html'
         }
       ]
     }
