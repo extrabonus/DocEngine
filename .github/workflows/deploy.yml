@@ -19,10 +19,11 @@ jobs:
           node-version: '18'
           cache: 'npm'
 
-      - name: Install dependencies
+      - name: Clean install
         run: |
-          npm install -g vitepress
-          npm install
+          rm -rf node_modules
+          rm -f yarn.lock
+          yarn install
 
       - name: Build
         run: |
