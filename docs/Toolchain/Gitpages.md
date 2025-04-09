@@ -2,8 +2,8 @@
 
 ## 基础准备
 
-   - 确保你的项目有静态网站入口（如 `index.html`），Vitepress默认有`index.html`文件，需进入构建好的静态文件目录：`cd docs/.vitepress/dist`。
-   - 如果项目是纯代码，需要先构建生成 `dist` 或 `docs` 目录的静态文件。
+1. 确保你的项目有静态网站入口（如 `index.html`），Vitepress默认有`index.html`文件，需进入构建好的静态文件目录：`cd docs/.vitepress/dist`。
+2. 如果项目是纯代码，需要先构建生成 `dist` 或 `docs` 目录的静态文件。
 
 
 
@@ -29,12 +29,12 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
 - `-t ed25519`：指定密钥类型（推荐）。
 - `-C "邮箱"`：替换为你的 GitHub 注册邮箱（仅作为注释，不影响功能）。
 
-**操作提示：**
+::: tip 提示
 - 提示 `Enter file in which to save the key` 时，直接按回车（默认保存到 `~/.ssh/id_ed25519`）。
 - 提示 `Enter passphrase` 时，可设置密码保护密钥（可选，按回车跳过）。
+::: 
 
-
-3. 将 SSH 密钥添加到 ssh-agent**
+1. 将 SSH 密钥添加到 ssh-agent**
 ```bash
 # 启动 ssh-agent
 eval "$(ssh-agent -s)"
@@ -42,8 +42,9 @@ eval "$(ssh-agent -s)"
 # 添加私钥到 ssh-agent
 ssh-add ~/.ssh/id_ed25519
 ```
-**操作提示：**
-- 以上需在git环境下运行，推荐`Git Bash`。
+::: tip 提示
+以上需在git环境下运行，推荐`Git Bash`。
+:::
 
 ```powershell
 # 添加密钥（替换为你的私钥路径）
@@ -60,7 +61,7 @@ ssh -T git@github.com
 ### 将公钥添加到 GitHub
 
 1. **复制公钥内容**  
-   ```bash
+   ```powershell
    cat ~/.ssh/id_ed25519.pub
    ```
    - 输出以 `ssh-ed25519 AAA...` 开头的内容，全选复制。
@@ -78,12 +79,12 @@ ssh -T git@github.com
 ### 配置 Git 使用 SSH
 将仓库的远程地址从 HTTPS 改为 SSH：
 
-```bash
+```powershell
 git remote set-url origin git@github.com:extrabonus/DocEngine.git
 ```
 之后推送代码无需密码：
 
-```bash
+```powershell
 git push origin gh-pages
 ```
 系统会跳出以下页面，请登录Github。

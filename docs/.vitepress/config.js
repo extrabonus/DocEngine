@@ -28,8 +28,18 @@ export default defineConfig({
     ],
     sidebar: {
       'Artifacts': [
-        { text: '技能介绍', link: '/Artifacts/index' },
-        { text: '技术图谱', link: '/Artifacts/123' }
+        { text: '文档标准规范', 
+          link: '/Artifacts/Info.html',
+          collapsed:true,
+          items:[
+            { text: '产品文档体系', link: '/Artifacts/productDoc.html'},
+            { text: '技术文档体系', link: '/Artifacts/tecDoc.html'},
+            { text: '格式', link: '/Artifacts/Form.html'},
+          ]
+        },
+        // { text: '硬件安装手册', link: '/Artifacts/HardwareInstalManual.html' },
+        // { text: '硬件用户手册', link: '/Artifacts/123' },
+        // { text: '软件操作手册', link: '/Artifacts/123' }
       ],
       'Toolchain': [
         { text: 'Markdown', link: '/Toolchain/Markdown.html' },
@@ -90,14 +100,14 @@ export default defineConfig({
         }
       ],
       'Insights': [
-        { 
-          text: '当信息过载遭遇AI革命', 
-          link: '/Insights/Infoverload.html'
-        },
-        { 
-          text: '项目案例', 
-          link: '/Insights/789.html'
-        }
+        // { 
+        //   text: '当信息过载遭遇AI革命', 
+        //   link: '/Insights/Infoverload.html'
+        // },
+        // { 
+        //   text: '项目案例', 
+        //   link: '/Insights/789.html'
+        // }
       ]
     }
   },

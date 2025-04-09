@@ -847,6 +847,11 @@ is-what@^4.1.8:
   resolved "https://registry.npmjs.org/is-what/-/is-what-4.1.16.tgz"
   integrity sha512-ZhMwEosbFJkA0YhFnNDgTM4ZxDRsS6HqTo7qsZM08fehyRYIYa0yHu5R6mgo1n/8MgaPBXiPimPD77baVFYg+A==
 
+javascript-stringify@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/javascript-stringify/-/javascript-stringify-2.1.0.tgz#27c76539be14d8bd128219a2d731b09337904e79"
+  integrity sha512-JVAfqNPTvNq3sB/VHQJAFxN/sPgKnsKrCwyRt15zwNCdrMMJDdcEOdubuy+DuJYYdm0ox1J4uzEuYKkN+9yhVg==
+
 magic-string@^0.30.11:
   version "0.30.17"
   resolved "https://registry.npmjs.org/magic-string/-/magic-string-0.30.17.tgz"
@@ -1129,6 +1134,13 @@ vite@^5.4.14:
     rollup "^4.20.0"
   optionalDependencies:
     fsevents "~2.3.3"
+
+vitepress-plugin-announcement@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/vitepress-plugin-announcement/-/vitepress-plugin-announcement-0.1.4.tgz#66727fa1cd43d984c781c0aa1723122192121edf"
+  integrity sha512-3z39IJmN1GOyLwIZtGLV9uMUdH5xonMV+ELUgFZ0TOrF+1+HEFQo0gXYF+5tbFZcqEJgU5ESPLM29nkfzSRToQ==
+  dependencies:
+    javascript-stringify "^2.1.0"
 
 vitepress@^1.6.3:
   version "1.6.3"
