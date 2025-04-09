@@ -1,0 +1,1 @@
+import{_ as t,c as e,o as s}from"./chunks/framework.Cw7PKvxc.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"Insights/456.md","filePath":"Insights/456.md"}'),a={name:"Insights/456.md"};function n(r,o,c,i,_,p){return s(),e("div")}const f=t(a,[["render",n]]);export{m as __pageData,f as default};
