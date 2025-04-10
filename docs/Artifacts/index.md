@@ -3,5 +3,4 @@
 
 ## 目录
 
-- [技能介绍](/Artifacts/index.html)
-- [技术图谱](/Artifacts/123.html) 
+- [文档规范标准](/Artifacts/Info.html)

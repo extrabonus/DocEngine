@@ -6,7 +6,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 export default defineConfig({
   title: 'Jakei',
   outDir: path.resolve(__dirname, '../../dist'),
-  base: '/DocEngine/',  // 始终使用 /DocEngine/ 作为基础路径
+  base: '/',  // 始终使用 /DocEngine/ 作为基础路径
   cleanUrls: false,
   ignoreDeadLinks: true,  // 忽略死链接检查
   head: [
