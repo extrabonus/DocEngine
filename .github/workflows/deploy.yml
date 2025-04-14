@@ -27,7 +27,9 @@ jobs:
       - name: Build VitePress
         run: |
           rm -rf dist
+          mkdir -p dist
           yarn build
+          cp dist/index.html dist/404.html  # 关键：解决子路由404
           find dist -type f -exec chmod 644 {} \;
           find dist -type d -exec chmod 755 {} \;
 

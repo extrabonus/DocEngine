@@ -16,7 +16,3 @@ Thumbs.db
 *.ntvs*
 *.njsproj
 *.sln
-
-# 明确忽略VitePress缓存依赖
-docs/vitepress/cache/deps/*.js
-docs/vitepress/cache/deps/*.map
