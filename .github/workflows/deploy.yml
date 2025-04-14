@@ -1,4 +1,4 @@
-name: Deploy
+name: Deploy Docs to GitHub Pages
 
 on:
   push:
@@ -8,37 +8,34 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # 写入权限
+      contents: write  # 必需：允许写入gh-pages分支
+
     steps:
-      - name: Checkout
+      - name: Checkout Code
         uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-          cache: 'npm'
+          cache: 'yarn'  # 改为Yarn缓存
 
-      - name: Clean install
+      - name: Install Dependencies (Yarn)
         run: |
-          rm -rf node_modules
-          rm -f yarn.lock
-          yarn install
+          yarn install --frozen-lockfile  # 强制使用yarn.lock版本
 
-      - name: Build
+      - name: Build VitePress
         run: |
-          npx vitepress build docs
-          # 确保所有文件都有正确的权限
+          rm -rf dist
+          yarn build
           find dist -type f -exec chmod 644 {} \;
           find dist -type d -exec chmod 755 {} \;
-          # 打印构建后的文件结构
-          find dist -type f
 
-      - name: Deploy
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: dist  # 根据.gitignore中的路径调整
+          # destination_dir: DocEngine    # 匹配截图中的目标目录
           commit_message: "Deploy: $(date +'%Y-%m-%d %H:%M:%S')"
-          force_orphan: true
-          destination_dir: DocEngine
+          force_orphan: true            # 强制清空历史

@@ -29,12 +29,12 @@ export default defineConfig({
     sidebar: {
       'Artifacts': [
         { text: '文档标准规范', 
-          link: '/Artifacts/Info.html',
           collapsed:true,
           items:[
+            { text: '文档规范', link: '/Artifacts/Info.html'},
+            { text: '文档格式', link: '/Artifacts/Form.html'},            
             { text: '产品文档体系', link: '/Artifacts/productDoc.html'},
             { text: '技术文档体系', link: '/Artifacts/tecDoc.html'},
-            { text: '格式', link: '/Artifacts/Form.html'},
           ]
         },
         // { text: '硬件安装手册', link: '/Artifacts/HardwareInstalManual.html' },
