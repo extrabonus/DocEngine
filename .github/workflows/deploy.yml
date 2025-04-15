@@ -8,7 +8,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # 必需：允许写入gh-pages分支
+      contents: write
+      pages: write
+      id-token: write
 
     steps:
       - name: Checkout Code
@@ -18,26 +20,22 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-          cache: 'yarn'  # 改为Yarn缓存
+          cache: 'yarn'
 
-      - name: Install Dependencies (Yarn)
-        run: |
-          yarn install --frozen-lockfile  # 强制使用yarn.lock版本
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile
 
       - name: Build VitePress
         run: |
-          rm -rf dist
-          mkdir -p dist
           yarn build
-          cp dist/index.html dist/404.html  # 关键：解决子路由404
-          find dist -type f -exec chmod 644 {} \;
-          find dist -type d -exec chmod 755 {} \;
+          cp dist/index.html dist/404.html
+          # 如果使用自定义目录：yarn build --outDir docs/.vitepress/dist
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: dist  # 根据.gitignore中的路径调整
-          # destination_dir: DocEngine    # 匹配截图中的目标目录
+          publish_dir: ../dist  # 与配置中的 outDir 一致
+          publish_branch: gh-pages
           commit_message: "Deploy: $(date +'%Y-%m-%d %H:%M:%S')"
-          force_orphan: true            # 强制清空历史
+          force_orphan: true
