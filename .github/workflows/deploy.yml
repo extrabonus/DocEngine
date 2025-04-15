@@ -28,14 +28,15 @@ jobs:
       - name: Build VitePress
         run: |
           yarn build
-          cp dist/index.html dist/404.html
-          # 如果使用自定义目录：yarn build --outDir docs/.vitepress/dist
+          cp docs/.vitepress/dist/index.html docs/.vitepress/dist/404.html
+          find docs/.vitepress/dist -type f -exec chmod 644 {} \;
+          find docs/.vitepress/dist -type d -exec chmod 755 {} \;
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ../dist  # 与配置中的 outDir 一致
+          publish_dir: docs/.vitepress/dist  # 匹配实际路径
           publish_branch: gh-pages
           commit_message: "Deploy: $(date +'%Y-%m-%d %H:%M:%S')"
           force_orphan: true
