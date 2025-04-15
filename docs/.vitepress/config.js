@@ -42,7 +42,7 @@ export default defineConfig({
         // { text: '软件操作手册', link: '/Artifacts/123' }
       ],
       'Toolchain': [
-        { text: 'Markdown', link: '/Toolchain/markdown' },
+        { text: 'Markdown', link: '/Toolchain/Markdown' },
         { text: 'Git', link: '/Toolchain/Git' },
         { text: 'Github pages', link: '/Toolchain/Gitpages' },
         { text: 'Linux', link: '/Toolchain/Linux' },
@@ -51,51 +51,51 @@ export default defineConfig({
           text: 'Python',
           collapsed: true,
           items: [
-            { text: '基础语法', link: '/Toolchain/python/index' },
-            { text: '字符串', link: '/Toolchain/python/str' },
-            { text: '列表', link: '/Toolchain/python/list' },
-            { text: '元组', link: '/Toolchain/python/tuple' },
-            { text: '序列', link: '/Toolchain/python/sequence' },
-            { text: '字典', link: '/Toolchain/python/dict' },
-            { text: '集合', link: '/Toolchain/python/set' },
+            { text: '基础语法', link: '/Toolchain/Python/index' },
+            { text: '字符串', link: '/Toolchain/Python/str' },
+            { text: '列表', link: '/Toolchain/Python/list' },
+            { text: '元组', link: '/Toolchain/Python/tuple' },
+            { text: '序列', link: '/Toolchain/Python/sequence' },
+            { text: '字典', link: '/Toolchain/Python/dict' },
+            { text: '集合', link: '/Toolchain/Python/set' },
             { 
               text: '函数',
               collapsed: true,
               items: [
-                { text: '基础用法', link: '/Toolchain/python/function/basic' },
-                { text: '高阶用法', link: '/Toolchain/python/function/advance' },
-                { text: '内置函数', link: '/Toolchain/python/function/defined' },
-                { text: '类型注释', link: '/Toolchain/python/function/annotation' }
+                { text: '基础用法', link: '/Toolchain/Python/function/basic' },
+                { text: '高阶用法', link: '/Toolchain/Python/function/advance' },
+                { text: '内置函数', link: '/Toolchain/Python/function/defined' },
+                { text: '类型注释', link: '/Toolchain/Python/function/annotation' }
               ]
             },
             { 
               text: '文件',
               collapsed: true,
               items: [
-                { text: '文件操作', link: '/Toolchain/python/file' },
-                { text: '路径读取', link: '/Toolchain/python/path' }
+                { text: '文件操作', link: '/Toolchain/Python/file' },
+                { text: '路径读取', link: '/Toolchain/Python/path' }
               ]
             },
             { 
               text: '类与对象',
               collapsed: true,
               items: [
-                { text: '基础概念', link: '/Toolchain/python/class/basic' },
-                { text: '魔法方法', link: '/Toolchain/python/class/magic' }
+                { text: '基础概念', link: '/Toolchain/Python/class/basic' },
+                { text: '魔法方法', link: '/Toolchain/Python/class/magic' }
               ]
             },
             { 
               text: '最佳实践',
               collapsed: true,
               items: [
-                { text: '字符串', link: '/Toolchain/python/practice/str_lesson' },
-                { text: '列表', link: '/Toolchain/python/practice/list_lesson' },
-                { text: '字典', link: '/Toolchain/python/practice/dict_lesson' },
-                { text: '函数', link: '/Toolchain/python/practice/func_lesson' },
-                { text: '文件', link: '/Toolchain/python/practice/file_lesson' }
+                { text: '字符串', link: '/Toolchain/Python/practice/str_lesson' },
+                { text: '列表', link: '/Toolchain/Python/practice/list_lesson' },
+                { text: '字典', link: '/Toolchain/Python/practice/dict_lesson' },
+                { text: '函数', link: '/Toolchain/Python/practice/func_lesson' },
+                { text: '文件', link: '/Toolchain/Python/practice/file_lesson' }
               ]
             },
-            { text: '常见问题', link: '/Toolchain/python/faq' }
+            { text: '常见问题', link: '/Toolchain/Python/faq' }
           ]
         }
       ],
