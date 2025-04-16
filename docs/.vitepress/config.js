@@ -46,7 +46,7 @@ export default defineConfig({
         { text: 'Git', link: '/Toolchain/Git' },
         { text: 'Github pages', link: '/Toolchain/Gitpages' },
         { text: 'Linux', link: '/Toolchain/Linux' },
-        { text: 'Postman', link: '/Toolchain/postman' },
+        // { text: 'Postman', link: '/Toolchain/postman' },
         { 
           text: 'Python',
           collapsed: true,

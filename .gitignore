@@ -6,6 +6,13 @@ dist/
 node_modules/
 gh-pages-TEMP/
 
+# 在项目根目录的 .gitignore 文件中添加：
+.cache/
+node_modules/
+docs/.vitepress/cache/
+*.map
+*.local
+
 # 忽略自动生成的静态资源元数据
 hashmap.json
 vp-icons.css
